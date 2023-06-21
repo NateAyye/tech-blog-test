@@ -1,0 +1,34 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <script src='https://cdn.tailwindcss.com'></script>
+    <link rel='stylesheet' href='/css/style.css' />
+    <link rel='stylesheet' href='/css/reset.css' />
+    <title>Tech Jab</title>
+  </head>
+  <header
+    class='flex justify-between items-center bg-blue-600/60 text-white px-3'
+  >
+    <img width='100' height='40' src='/images/tech-blog-logo-2.png' />
+    <h1 class='text-lg font-extrabold'>Tech Jab</h1>
+    <nav>
+      <ul class='flex gap-2 font-semibold'>
+        <li><a href='/'>Home</a></li>
+        {{#if logged_in}}
+          <li><a href='/dashboard'>Dashboard</a></li>
+        {{else}}
+          <li><a href='/register'>Register</a></li>
+          <li><a href='/login'>Login</a></li>
+        {{/if}}
+      </ul>
+    </nav>
+  </header>
+  <body>
+    {{{body}}}
+  </body>
+  <footer>
+    <p>Tech Jab &copy; 2017</p>
+
+  </footer>
+</html>
